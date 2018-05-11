@@ -1,0 +1,18 @@
+<input [(ngModel)]="userInput" (keyup)="filterDrugList(userInput)" type="text" name="search" placeholder="Search..">
+
+
+  <h3>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+    Drugs&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 
+    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+    Mechanisms</h3>
+  <ul id="DrugSection" style="display: inline-block;text-align: center;background-color: #659684;">     
+    <li *ngFor="let drgObj of drugs; let i = index">
+        <p class="drugs">{{drgObj.Name}}</p>
+    </li>
+  </ul> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+  <ul id="mechanismsSection" style="display: inline-block;text-align: center;background-color: #659684;">     
+    <li *ngFor="let drgObj of mechanisms; let i = index">
+        <p class="drugs">{{drgObj.Name}}</p>
+    </li>
+  </ul>
+
